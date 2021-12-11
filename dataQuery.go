@@ -25,7 +25,7 @@ func QueryUserName() error {
 			// there were no rows, but otherwise no error occurred
 			// sql.ErrNoRows 由 QueryRow方法返回
 			// 大多数情况下需要处理
-            // 对sql.ErrNoRows包装后返回
+                        // 对sql.ErrNoRows包装后返回
 			return errors.Wrapf(err, "[用户查询]失败  不存在id=%d的用户", id)
 		} else {
 			log.Fatal(err)
